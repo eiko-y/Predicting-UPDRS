@@ -66,7 +66,11 @@ See deploy_updrs_fastapi.sh for script summarizing:
 ## Project Structure Highlights
 fastapi-deploy
 In the root directory, Dockerfile, serve.sh, adn deploy_updrs_fastapi.sh
-app/ — Contains the trained model file (model.pkl) and FastAPI application code (main.py) and requirements.txt
+
+app/ - Holds fastapi resources, including:
+* main.py
+* model.pkl
+* requirements.txt
 
 
 sagemaker_deploy/ — Holds the SageMaker deployment resources, including:
@@ -109,7 +113,7 @@ Running Locally
   test_JSON and test_output provided as example test case.
 
 5. Run in the Docker container
-   * ```bash
+
 docker build -t fastapi-model .
 docker run -p 8082:8080 fastapi-model serve
 
